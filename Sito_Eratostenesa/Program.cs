@@ -16,6 +16,27 @@
         public static void Main(string[] args)
         {
             int n = 100;
+
+            WypelnijTablice(n);
+
+            for(int i = 2; i * i < n; i++)
+            {
+                if (tablica[i])
+                {
+                    for(int j = 2 * i; j * n < n; j++)
+                    {
+                        tablica[j * i] = false;
+                    }
+                }
+            }
+
+            for(int i = 2; i < n; i++)
+            {
+                if (tablica[i])
+                {
+                    Console.Write($"{i} ");
+                }
+            }
         }
     }
 }
